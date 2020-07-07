@@ -1,0 +1,26 @@
+HKCR
+{
+	SMSFirstObject.1 = s 'FirstObject class'
+	{
+		CLSID = s '{45da9243-9dfe-4237-af65-8ff4085ed02e}'
+	}
+	SMSFirstObject = s 'FirstObject class'
+	{		
+		CurVer = s 'SMSFirstObject.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {45da9243-9dfe-4237-af65-8ff4085ed02e} = s 'FirstObject class'
+		{
+			ProgID = s 'SMSFirstObject.1'
+			VersionIndependentProgID = s 'SMSFirstObject'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{f2b107d7-0daf-4126-8f03-b85e7a3f2149}'
+			Version = s '1.0'
+		}
+	}
+}
